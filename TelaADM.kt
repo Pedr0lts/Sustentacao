@@ -38,7 +38,7 @@ class TelaADM : AppCompatActivity() {
 
             val empId = dbRef.push().key!!
 
-            val empregador = EmpresaModelo(empId, empName, empCargo, empSalario)
+            val empregador = CoisasModelo(empId, empName, empCargo, empSalario)
 
             dbRef.child(empId).setValue(empregador)
                 .addOnCompleteListener{
